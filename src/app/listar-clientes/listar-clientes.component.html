@@ -1,0 +1,37 @@
+<div class="">
+    <ion-grid>
+        <ion-row class="centrar-elementos" style="align-items: flex-start !important; text-align: center;">
+            <ion-col size="12" size-sm="5">
+                <h6 class="centrar-elementos letra-negrita">Lista de usuarios</h6>
+                <ol class="usuariosList" *ngFor="let usuario of datosPersona">
+                    <li>ID:{{usuario.id}} {{usuario.nombre}} {{usuario.apellidoPaterno}}, {{usuario.identificacion}}</li>
+                </ol> 
+            </ion-col>
+            <ion-col size="12" size-sm="5">
+                <ion-row>
+                    <ion-col size="12">
+                        <h6 class=" letra-negrita"
+                        style="align-items: flex-start !important;">Buscar por identificacion</h6>
+                    </ion-col>
+                    <ion-col size="8">
+                                <span class="icon"><i class="fa fa-search"></i></span>
+                                <input type="search" [(ngModel)]="buscarTexto"  id="search" placeholder="Buscar" />
+                    </ion-col>
+                    <ion-col size="4">
+                        <input type="submit" style="margin-top: 0 !important;" (click)="buscar()" value="Buscar">
+                    </ion-col>
+                    <ion-col size="12">
+                        <p *ngIf="datoPersona && !mostrarNulo">
+                            {{datoPersona.nombre}} {{datoPersona.apellidoPaterno}} {{datoPersona.apellidoMaterno}}, 
+                            {{datoPersona.identificacion}}
+                        </p>
+                        <p *ngIf="mostrarNulo" class="respuesta-incorrecta">
+                            No existe usuario
+                        </p>
+                    </ion-col>
+                </ion-row>
+               
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</div>

@@ -1,0 +1,36 @@
+
+
+    
+  <ion-content class="ion-padding">
+    
+  <ion-header class="header">
+    <ion-grid>
+      <ion-row>
+        <ion-col class="centrar-elementos centrar-elementos-mobil">
+          <ion-title style="color: var(--ion-color-secondary-contrast);">Saul Mendoza</ion-title>
+        </ion-col>
+        <ion-col class="centrar-elementos">
+          <ion-row>
+            <ion-col class="centrar-elementos">
+              <ion-button class="botonHeader" (click)="redirecionar('alta-cliente')">Alta cliente</ion-button>
+            </ion-col>
+            <ion-col class="centrar-elementos">
+              <ion-button class="botonHeader" (click)="redirecionar('listar-clientes')">Buscar cliente</ion-button>
+            </ion-col>
+            <ion-col class="centrar-elementos">
+              <ion-button class="botonHeader" (click)="redirecionar('alta-facturas')">Crear factura</ion-button>
+            </ion-col>
+            <ion-col class="centrar-elementos">
+              <ion-button class="botonHeader" (click)="redirecionar('listar-facturas')">Buscar factura</ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+
+  </ion-header>
+
+    <router-outlet></router-outlet>
+  </ion-content>
+

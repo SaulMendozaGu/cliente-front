@@ -1,0 +1,12 @@
+.botonHeader{
+    font-size: 10px;
+}
+input[type=submit]{
+    margin-top: 30px;
+    background: var(--ion-color-success);
+    color: #3A3D52;
+    margin-left:0px !important;
+  }
+  input[type=submit]:hover{
+    background:var(--ion-color-success-shade);
+  }
